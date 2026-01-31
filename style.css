@@ -1,0 +1,267 @@
+* {
+    padding:0;
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    font-family:'Comic Sans MS';
+}
+
+header {
+    background-color:rgba(0,0,15,0.875);
+    height:80px;
+    width:100%;
+    position:fixed;    
+}
+header nav {
+      overflow: hidden;
+      background-color: #000;
+     }
+header nav a {
+      float: left;
+      color: #00ffff;
+      text-align: center;
+      padding: 0px 20px;
+      text-decoration: none;
+      font-size:min(3.25vw,30px);
+     }
+header nav a:hover {
+      background-color: #0ff;
+      text-decoration: none;
+      color: red;
+     }
+header nav a:active {
+      background-color: #00f;
+      text-decoration: none;
+      color: yellow;
+     }
+header ul {
+    position:absolute;
+    top:0;
+    line-height:80px;
+}
+header li {
+    display:inline;  
+}
+
+.intro {
+    background-color:#000;
+    color:transparent;
+    height:max(100vh,400px);
+    background-image: url("images/icon_inverted.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+} 
+.intro h2 {
+    -webkit-text-stroke: 1px #fff;
+    font-size:min(5vw,100px);
+    margin-top:60px;
+} 
+.intro p {
+    font-size:max(2vw,15px);
+    margin:25px 0;
+}
+
+.about {
+    background-color:#003;
+    color:#ffc;
+    display:flex;
+    padding:150px;
+    column-gap:80px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8em;  
+}
+.video {
+    background-color:#000;
+    color:#f00;
+    display:flex;
+    padding:80px 80px;
+    column-gap:80px;
+    justify-content: center;
+    align-items: center;
+    font-size: max(1.25vw,12px);
+    line-height: 4em;
+}
+
+.container {
+  position: relative;
+  width:100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+table{
+  font-size:max(1.5vw,20px);
+  border-spacing:max(1.5vw,15px);
+}
+th{
+  text-align: left
+}
+
+.media {
+    display:flex;
+    background-color: #e60;
+    justify-content: space-between;
+    align-items: center;
+    padding: 200px 100px;
+}
+.media div {
+    width:300px;
+    text-align:center;
+}
+.media img {
+    width:50%;
+}
+.media h3 {
+    font-size: 30px;    
+    margin: 10px 0;
+}
+.media p {
+    font-size:20px;
+    line-height: 1.6em;
+}
+#myVideo {
+  width: 50vw;
+  filter: blur(2.5px);
+}
+.game {
+    display:flex;
+    background-color: #050653;
+}
+
+.game a:link,.game a:visited {
+    color:inherit;
+}
+
+.game a:hover {
+    color: red;
+}
+
+.info {
+    width:50%;
+    background-color: #050653;
+    color:#0ef;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.info h2 {
+    font-size:max(2.5vw,20px);
+    margin-bottom: 30px;
+}
+.info p {
+    text-align: center;
+    font-size:max(2vw,15px);
+    line-height: 2em;
+}
+
+.ppt {
+    margin: 30px;
+    display:flex;
+    flex-direction: column;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+}
+
+.info2 {
+    padding-top: 30px;
+    background-color: #000;
+    color:#fff;
+    align-items: center;
+    justify-content: center;
+}
+.info2 h2 {
+    font-size:max(2.5vw,20px);
+}
+
+.link {
+    background-color: #000;
+    color:transparent;
+    -webkit-text-stroke: 2px #000;
+    background-image: url("images/eva.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.link h2 {
+   margin:20px;
+}
+.link img{
+   margin:0.5vw;
+}
+footer {
+    background-color:#000000;
+    color:#B7B7B7;
+    height:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height:1.5;
+}
+/* 響應式設計語法 */
+@media screen and (max-width: 705px) {
+header{
+   height:150px;
+}
+header h1 {
+    left:50%;
+    transform: translateX(-50%);
+}
+header li{
+    display:inline;
+}
+
+.about{
+flex-direction: column;
+}
+
+.video img{
+  display:none
+}
+
+.media {
+    flex-direction: column;
+    padding: 60px 0;
+}
+.media div {
+    margin-bottom: 30px;
+}
+
+#myVideo {
+  width: 100%;
+}
+.game{
+  flex-direction: column;
+}
+.info {
+    width:100%;
+    padding:40px 0;
+}
